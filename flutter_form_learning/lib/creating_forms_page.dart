@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:core';
 
 // Define a custom Form widget.
 class CreatingFormsPage extends StatefulWidget {
@@ -33,6 +34,7 @@ class _CreatingFormsPageState extends State<CreatingFormsPage> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  autofocus: true,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: "Enter your username!",

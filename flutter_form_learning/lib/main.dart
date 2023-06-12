@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_learning/creating_forms_page.dart';
 import 'package:flutter_form_learning/handling_changes_in_forms_page.dart';
+import 'package:flutter_form_learning/focus_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -48,6 +49,9 @@ class _MyHomePage extends State<MyHomePage> {
       case 1:
         page = const HandlingChangesInFormsPage();
         break;
+      case 2:
+        page = const FocusLearningPage();
+        break;
       default:
         throw UnimplementedError("No Widget Page for $selectedIndex");
     }
@@ -64,6 +68,9 @@ class _MyHomePage extends State<MyHomePage> {
                       icon: Icon(Icons.home), label: Text("Creating Forms")),
                   NavigationRailDestination(
                       icon: Icon(Icons.favorite), label: Text("Favorites")),
+                  NavigationRailDestination(
+                      icon: Icon(Icons.filter_center_focus),
+                      label: Text("Focus Learning")),
                 ],
                 selectedIndex: selectedIndex,
                 onDestinationSelected: (value) => setState(() {
